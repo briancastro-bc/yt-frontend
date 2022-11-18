@@ -1,0 +1,58 @@
+@use "src/assets/sass/variables";
+
+.home {
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    max-width: 1366px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: unset;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 4rem;
+
+    &--content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 560px;
+      margin: 0 auto;
+
+      .brand {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        margin-bottom: .5rem;
+
+        .presentation {
+          color: var(--text-alt-theme);
+          font-weight: 1000;
+          font-family: 'Inconsolata', serif;
+          text-indent: 3.5px;
+          display: inline-block;
+        }
+
+        .name {
+          font-weight: 800;
+          font-size: 5rem;
+          line-height: 1;
+          letter-spacing: .25rem;
+          font-family: 'Montserrat', sans-serif;
+        }
+      }
+
+      .subtitle {
+        font-size: 2.25rem;
+        line-height: 2rem;
+        color: var(--primary-color);
+      }
+
+      .description {
+        font-size: 1.15rem;
+      }
+    }
+  }
+}

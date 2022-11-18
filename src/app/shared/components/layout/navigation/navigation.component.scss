@@ -1,0 +1,14 @@
+@use "src/assets/sass/variables";
+
+.navigation {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

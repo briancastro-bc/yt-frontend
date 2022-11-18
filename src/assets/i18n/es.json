@@ -1,0 +1,22 @@
+{
+  "app": {
+    "navbar": {
+      "brand": {
+        "name": "Brian Castro",
+        "socialMedia": {
+          "instagram": "Instagram",
+          "github": "Github",
+          "youtube": "Youtube"
+        }
+      }
+    },
+    "home": {
+      "brand": {
+        "presentation": "Hola! Yo soy",
+        "name": "Brian Castro"
+      },
+      "subtitle": "Desarrollador Fullstack",
+      "description": ""
+    }
+  }
+}

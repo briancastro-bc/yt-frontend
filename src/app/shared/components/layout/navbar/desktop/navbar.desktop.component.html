@@ -1,0 +1,74 @@
+<header class="navbar" #navbar>
+  <nav class="navbar__wrapper">
+    <div class="side side__left">
+      <div class="side__left__content">
+        <span class="brand">
+          {{ 'app.navbar.brand.name' | translate }}
+        </span>
+      </div>
+    </div>
+    <!-- <div class="side side__center">
+      <div class="side__center--brand">
+        <svg class="side__center--brand__logo" version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250">
+          <defs>
+            <image id="img1"
+              href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAD6CAMAAAC4eeF2AAAAAXNSR0IB2cksfwAAASxQTFRFAAAA19/q19/q19/q19/q19/q19/q19/q19/q19/q19/q19/q19/q19/q19/q19/q19/q19/q19/q19/q19/q19/q19/q19/qvcbTY26BPUteNUBSOUVYO0dbO0daVWFzq7TCr7fF0trmxc3anaWzfIaVY218TllqQUxdOURWxc3ZiZOhUVxsxMzZusLPbHeGNkFTyNLdc32Mo6y5QEtb09vmeoOSeYOS0Njj0dnkW2V1YWp6YWt7oau3oaq3x8/bcHqJuMDNanODw8vXipSih4+eUFtrwsrXmqKwe4WUYmx9TVZoP0paQk1dTllphY+dw8vYeIKRoqu4ucLPUVpre4STQEtcOENVRlRobXmKxtDbNUBT19/q19/q19/q19/q19/q19/q19/q19/q8u0mQgAAAGR0Uk5TAAZWpt/5//PXVVHbUgOJVOPkW1yrrOD4///////////////////////////////////////////////////////////////////////////////////////////y2QeKk5RT+k1tvQ8AAAXrSURBVHic7dxpX1RlHMbxQ8qUEagoBnPcQcQdF8Kl3FrFssjc2qx8/+8hBhOOf2Zu5siZua7bft9HPeme2+vnBxXmTFF0jHywa/doCzIffrRrz0ix4eMx9YXQao198l+O8Qn1VfDaxPh6EHrYmOj02Ku+BTbtXfvzfJ/6Eti0f6SYVN8BVQeKg+oroGqqOKS+AqoOFZ+qr4Cq0WLzv6dn2sM3M637xXelXqESRHGTtbsIRk9Rr1AJ0m6Xw9duC0ZPUa9AkEC9AkEC9QoECdQrECRQr0CQQL0CQQL1CgQJ1CsQJFCvQJBAvQJBAvUKBAnUKxAkUK9AkEC9AkEC9QoECdQrECRQr0CQQL0CQQL1CgQJ1CsQJFCvQJBAvQJBAvUKBAnUKxAkUK9AkEC9AkEC9QoECdQrECRQr0CQQL0CQQL1CgQJ1CsQJFCvQJBAvQJBAvUKBAnUK9QPcvhIk+we+swvyNFGHz895vZYdI5Bjp9ozknB5klZBhHsNDQEMdPwBwccJcgONfzRGgSxcpwgXghihiBmCGKGIGYIYoYgZghihiBmCGKGIGYIYoYgZghihiBmCGKGIGYIYoYgZghihiBmCGKGIGYIYoYgZghihiBmCGKGIGYIYoYgZghihiBmCGKGIGYIYoYgZghihiBmCGKGIGYIYoYgZghihiBm3osgs3On5k8vnDmzcHr+1NxsfudX5R/k7Lnzb7/a+XMXcjo/yD3IxUuLW19v8dLFXM7fIu8gl690mWt9siuXczi/i6yDXL3W+zWvXfU/v5uMgyx9ln7V5SXv87vLN8j1+e1edv668/k9ZBvkxs3tX/fmDd/ze8k1yNKtfl7483f+qjLo83vKNcg2X9/fWHY9v6dMg3zR315ledvz/N7yDHIn8ffRt12743h+Qp5B7va7V1nedTw/Icsg93r8+7mbxXt+56dkGeR+/3uV5X2/81NyDHKhxm/gtd/CX7qdn5RjkK/q7FWWX7udn5RjkG/qDXba7fykDIPM1turLL/1Oj8twyBzdQf7zuv8tAyDPKg72AOv89MyDLLtt8WjFa/z0zIM8rDuYA+9zk/LMMj3dQf7wev8tAyD1N2rPON1fhpBhn5+WoZBan9JWfA6Py3DIPyh3mEUhL/2dhgF4R+GHUZB+NZJh1EQvrnYYRSk7rfHH7mdn5RjkJo/QPrR7fykHIP8NOAfsQ76/KQcg/Amh9IsCG8DMgvCG+XcgvBWUrMgrdv9DvaOb4Ye9Pm9ZRqktdzfXquu5/eUa5D+Hqi5NeAHdt79/J5yDcIjbW5BeOhz438xCdJaWk2/6upOH4se8PndZRxkmwf7f/Y/v5usg/DRGuuMgrRaj7t/OMzjXM7fIvcgnY9PCj+/+KXpj2ca7PlB/kHWnJ17svLo6bNnTx+tPJk7m9/5Ve9FkPcJQcwQxAxBzBDEDEHMEMQMQcwQxAxBzBDEDEHMEMQMQcwQxAxBzBDEDEHMEMQMQcwQxAxBzBDEDEHMEMQMQcwQxAxBzBDEDEHMEMQMQcwQxAxBzBDEDEHMEMQMQcwQxAxBzBDEDEHMEMQMQcwQxAxBzAwpyPMGvfhVsNPQDClIo14IdhqaoQT5bbFJ7eeCnYZmKEGaVbmKiZMnmkOQnZs+1uhXZILs1Ez7SJMO112BIIF6BYIE6hUIEqhXIEigXoEggXoFggTqFQgSqFcgSKBegSCBegWCBOoVCBKoVyBIoF6BIIF6BYIE6hUIEqhXIEigXoEggXoFggTqFQgSqFcgSKBegSCBegWCBOoVCBKoVyBIoF6BIIF6BYIE6hUIEqhXIEigXoEggXoFggTqFQgSqFcgSKBegSCBegWCBOoVCBKoVyBIoF6hEmSm0cdP+zUjGD1FvUIlyLTiLjPTgtFT1CsUvwt/8dhitPhDfQVUHSoOqq+AqqliUn0FVB0oRvap74BN+/8sij3qS2DTnmLNS/Ut8MbLTo9i/C/1PfDa3+PFa/+Mqa+CVmtsb7FhZHJq9yv1hf7PXu2emhxZT/EvrfEi9y1wZr0AAAAASUVORK5CYII=" />
+          </defs>
+          <style></style>
+          <use href="#img1" x="0" y="0" />
+        </svg>
+        <div class="side__center--brand__name">
+          <span>{{ 'app.navbar.title' | translate }}</span>
+        </div>
+      </div>
+    </div> -->
+    <div class="side side__right">
+      <ul class="side__right__overlays">
+        <li class="side__right__overlays--link instagram yt-glassmorphism" ytRipple>
+          <a class="overlay-background" (click)="secureRedirect('instagram')">
+            <i class="overlay-background__icon fa-brands fa-instagram"></i>
+            <span class="overlay-background__link">
+              {{ 'app.navbar.brand.socialMedia.instagram' | translate }}
+            </span>
+          </a>
+        </li>
+        <li class="side__right__overlays--link github yt-glassmorphism" ytRipple>
+          <a class="overlay-background" (click)="secureRedirect('github')">
+            <i class="overlay-background__icon fa-brands fa-github"></i>
+            <span class="overlay-background__link">
+              {{ 'app.navbar.brand.socialMedia.github' | translate }}
+            </span>
+          </a>
+        </li>
+        <li class="side__right__overlays--link youtube yt-glassmorphism" (click)="secureRedirect('youtube')" ytRipple>
+          <a class="overlay-background">
+            <i class="overlay-background__icon fa-brands fa-youtube"></i>
+            <span class="overlay-background__link">
+              {{ 'app.navbar.brand.socialMedia.youtube' | translate }}
+            </span>
+          </a>
+        </li>
+      </ul>
+      <div class="side__right__content">
+        <button type="button" class="yt-icon-btn" ytRipple>
+          <i class="icon fi fi-rr-bell"></i>
+        </button>
+        <button type="button" class="yt-icon-btn" (click)="switchTheme()" ytRipple>
+          <ng-container [ngSwitch]="(currentTheme$ | async)">
+            <i class="icon fi fi-rr-sun" *ngSwitchCase="'dark-theme'"></i>
+            <i class="icon fi fi-rr-moon" *ngSwitchCase="'light-theme'"></i>
+          </ng-container>
+        </button>
+        <div class="language" (click)="changeLanguage()" role="button" jsRipple>
+          <div class="language__flag">
+            <img class="language__flag--logo" [src]="(currentLanguage$ | async)?.flagSrc"
+              [alt]="(currentLanguage$ | async)?.label" loading="lazy">
+          </div>
+          <div class="language__label">
+            {{ (currentLanguage$ | async)?.label }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

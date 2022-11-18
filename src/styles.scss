@@ -1,1 +1,89 @@
-/* You can add global styles to this file, and also import other style files */
+@use "src/assets/sass/normalize";
+@use "src/assets/sass/variables";
+@use "src/assets/sass/custom";
+@use "src/assets/sass/animations";
+
+/*
+*
+* Fonts:
+*
+* sans-serif: 'Josefin Sans', 'Montserrat', 'Poppins', 'Sora', 'Ubuntu', 'Jura'.
+* serif: 'Inconsolata'.
+* monospace: 'Ubuntu Mono'.
+* custom: 'JetBrains'.
+*
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Jura:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sora:wght@100;200;300;400;500;600;700;800&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+  /* base colors */
+  --light-color: #{variables.$light-color};
+  --light-alt-color: #{variables.$light-alt-color};
+  --dark-color: #{variables.$dark-color};
+  --dark-alt-color: #{variables.$dark-alt-color};
+
+  /* frost theme */
+  --primary-color: #{variables.$primary-color};
+  --primary-alt-color: #{variables.$primary-alt-color};
+  --secondary-color: #{variables.$secondary-color};
+  --secondary-alt-color: #{variables.$secondary-alt-color};
+
+  /* nord dark theme */
+  --primary-dark-color: #{variables.$primary-dark-color};
+  --primary-dark-alt-color: #{variables.$primary-dark-alt-color};
+  --secondary-dark-color: #{variables.$secondary-dark-color};
+  --secondary-dark-alt-color: #{variables.$secondary-dark-alt-color};
+
+  /* nord light theme */
+  --primary-light-color: #{variables.$primary-light-color};
+  --primary-light-alt-color: #{variables.$primary-light-alt-color};
+  --secondary-light-color: #{variables.$secondary-light-color};
+
+  /* heighs */
+  --header-height: variables.$header-height;
+}
+
+* {
+	&::-webkit-scrollbar {
+		display: block;
+		height: 5px;
+		width: 5px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: 20px;
+		background-color: var(--primary-color);
+	}
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-theme);
+  color: var(--text-theme);
+}
+
+body.light-theme {
+  --text-theme: var(--dark-color);
+  --text-alt-theme: var(--dark-alt-color);
+  --border-theme: #15141430;
+  --border-alt-theme: 0 1.5px 2.5px 0 var(--border-theme);
+  --background-theme: var(--secondary-light-color);
+  --background-alt-theme: var(--primary-light-alt-color);
+  --against-theme: var(--primary-dark-color);
+  --againts-alt-theme: var(--primary-dark-alt-color);
+}
+
+body.dark-theme {
+  --text-theme: var(--light-color);
+  --text-alt-theme: var(--light-alt-color);
+  --border-theme: #fbfbfb30;
+  --border-alt-theme: 0 .25px 2.5px 0 var(--border-theme);
+  --background-theme: var(--primary-dark-color);
+  --background-alt-theme: var(--primary-dark-alt-color);
+  --against-theme: var(--secondary-light-color);
+  --againts-alt-theme: var(--primary-light-alt-color);
+}
