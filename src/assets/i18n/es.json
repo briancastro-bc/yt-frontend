@@ -1,5 +1,19 @@
 {
   "app": {
+    "navigation": {
+      "home": {
+        "label": "inicio"
+      },
+      "about": {
+        "label": "sobre mi"
+      },
+      "works": {
+        "label": "proyectos"
+      },
+      "contact": {
+        "label": "contacto"
+      }
+    },
     "navbar": {
       "brand": {
         "name": "Brian Castro",

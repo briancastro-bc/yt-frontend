@@ -50,9 +50,9 @@
         </li>
       </ul>
       <div class="side__right__content">
-        <button type="button" class="yt-icon-btn" ytRipple>
+        <!-- <button type="button" class="yt-icon-btn" ytRipple>
           <i class="icon fi fi-rr-bell"></i>
-        </button>
+        </button> -->
         <button type="button" class="yt-icon-btn" (click)="switchTheme()" ytRipple>
           <ng-container [ngSwitch]="(currentTheme$ | async)">
             <i class="icon fi fi-rr-sun" *ngSwitchCase="'dark-theme'"></i>

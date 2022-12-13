@@ -10,5 +10,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
+
+    &--link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: .25rem;
+
+      .label {
+        display: none;
+      }
+
+      &:hover {
+
+        & .label {
+          display: block;
+        }
+      }
+    }
   }
 }

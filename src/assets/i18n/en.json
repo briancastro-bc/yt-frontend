@@ -1,5 +1,19 @@
 {
   "app": {
+    "navigation": {
+      "home": {
+        "label": "home"
+      },
+      "about": {
+        "label": "about"
+      },
+      "works": {
+        "label": "works"
+      },
+      "contact": {
+        "label": "contact"
+      }
+    },
     "navbar": {
       "brand": {
         "name": "Brian Castro",
