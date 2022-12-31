@@ -43,6 +43,11 @@
   --header-height: variables.$header-height;
 }
 
+@font-face {
+  font-family: 'Spoticon';
+  src: url("src/assets/fonts/spoticon.woff2") format("woff");
+}
+
 * {
 	&::-webkit-scrollbar {
 		display: block;

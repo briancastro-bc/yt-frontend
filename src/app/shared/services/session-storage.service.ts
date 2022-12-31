@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Inject, Injectable } from '@angular/core';
 
 import { CustomStorage } from '@core/storage';
 
@@ -7,7 +8,9 @@ import { CustomStorage } from '@core/storage';
 })
 export class SessionStorageService extends CustomStorage {
 
-  constructor() {
-    super(sessionStorage);
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+  ) {
+    super(document.defaultView!.sessionStorage);
   }
 }
